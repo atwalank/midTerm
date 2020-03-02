@@ -30,5 +30,12 @@ public class AccountTester {
              
         System.out.println("The balance is: "+a.getBalance());  
         System.out.println("The InterestRate per month is "+a.getInterestRate());
+        if(a.getBalance()>50)
+        {
+            System.out.println("Account Created");
+        
+        System.out.println();
+        System.out.println("Balance after one month = " + a.afterIntRate());
+        }
     }
 }

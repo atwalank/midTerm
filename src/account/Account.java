@@ -21,7 +21,9 @@ public class Account {
       */
         public Account(double initialBalance,String givenUser)
         {
+           
             balance=initialBalance;
+            
             user=givenUser;
             //Note that the initial balance must be greater than 50.       
         }
@@ -46,7 +48,12 @@ public class Account {
      */
         public double getBalance() 
         {
+            if(balance>50)
+            {
         return balance;
+            }
+            else
+                return 0;
         }
 
     /**The getter for InterestRate
@@ -62,6 +69,13 @@ public class Account {
      */
     public String getUser() {
         return user;
+    }
+    public double afterIntRate()
+    {
+        double inte;
+        inte = balance * 3/100;
+        return balance += inte;
+        
     }
     
     
